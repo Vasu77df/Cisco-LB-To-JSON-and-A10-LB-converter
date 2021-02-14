@@ -1,0 +1,16 @@
+#======================================
+#  SERVER INSTANCES
+#======================================
+THESE ARE THE CONFIGS FOR THE SERVER INSTANCES
+slb server SRV_SERVER ip_address
+health-check HM-keepalive_aspx-TCP_80
+slow-start
+port 80 tcp
+health-check-disable
+exit
+port 443 tcp
+health-check-disable
+exit
+exit
+
+ 

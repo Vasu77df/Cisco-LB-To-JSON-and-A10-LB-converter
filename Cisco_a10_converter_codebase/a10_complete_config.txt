@@ -1,0 +1,17 @@
+#======================================
+#  SERVER INSTANCES
+#======================================
+THIS IS HOW THE COMPLETE A10 LoadBlancer CONFIGS WOULD END UP
+slb virtual-server VIP_servicename ip address
+port 80 http
+source-nat pool NAT-GROUP-1
+service-group SG_servicegroup_name
+template http X-Forwarded-FOR
+exit
+port 443 tcp
+source-nat pool NAT-GROUP-1
+service-group SG_travel-servicename-443
+template tcp client-ip-header_tcp
+exit
+exit
+ 

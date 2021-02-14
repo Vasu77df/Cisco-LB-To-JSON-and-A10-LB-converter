@@ -1,0 +1,19 @@
+{
+    "example_lb_profile": {
+        "vip": "virtual ip",
+        "port": 80,
+        "protocol": "tcp",
+        "service": [
+            "service-name"
+        ],
+        "active_status": "active",
+        "application": null,
+        "advanced_balance": null,
+        "service-name": {
+            "ip_address": "ip",
+            "string": "server string",
+            "keepalive_type": "none",
+            "keepalive_uri": null,
+            "active_status": "active"
+        }
+    },

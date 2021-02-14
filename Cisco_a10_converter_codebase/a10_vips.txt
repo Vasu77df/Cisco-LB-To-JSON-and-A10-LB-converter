@@ -1,0 +1,18 @@
+#========================================
+#  VIP Configuration
+#========================================
+THESE ARE THE CONFIGS FOR THE VIRTUAL IPs OF THE SERVICES 
+slb virtual-server VIP_servicename ip_address
+port 80 http
+source-nat pool NAT-GROUP-1
+service-group SG_service_name-80
+template http X-Forwarded-FOR
+exit
+port 443 tcp
+source-nat pool NAT-GROUP-1
+service-group SG_servicename-443
+template tcp client-ip-header_tcp
+exit
+exit
+
+ 

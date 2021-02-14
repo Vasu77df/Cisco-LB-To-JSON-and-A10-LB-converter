@@ -1,0 +1,16 @@
+#=====================================
+#    SERVER GROUPS    
+#=====================================
+THESE ARE THE CONFIGS FOR THE A10 SERVICE GROUPS
+slb service-group SG_Service_name-80 tcp
+method least-connection
+member SRV_servername 80
+member SRV_servername 80
+member SRV_servername 80
+member SRV_servername 80
+member SRV_servername 80
+exit
+exit
+ 
+
+ 
